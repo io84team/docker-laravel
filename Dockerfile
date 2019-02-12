@@ -35,6 +35,6 @@ RUN mkdir -p /build
 
 COPY ./composer.json /build/composer.json
 
-WORKDIR /app
+WORKDIR /build
 
 RUN composer install
