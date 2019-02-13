@@ -46,6 +46,8 @@ RUN mkdir -p /app
 
 RUN chown -R www-data:www-data /app
 
+RUN rm -rf /var/www/html
+
 RUN ln -s /app/public /var/www/html
 
 VOLUME /app
