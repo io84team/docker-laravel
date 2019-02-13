@@ -42,14 +42,14 @@ RUN curl -sS https://getcomposer.org/installer \
 
 RUN a2enmod rewrite
 
-RUN mkdir -p /app
+RUN mkdir -p /app \
+    && chown -R www-data:www-data /app
 
-RUN chown -R www-data:www-data /app
+RUN rm -rf /var/www \
+    && mkdir -p /var/www
 
-RUN rm -rf /var/www/html
-
-RUN ln -s /app/public /var/www/html
+RUN ln -s /app/public /var/www/html \
+    && chown -R www-data:www-data /var/www/html
 
 VOLUME /app
-
 WORKDIR /app
