@@ -45,11 +45,9 @@ RUN a2enmod rewrite
 RUN mkdir -p /app \
     && chown -R www-data:www-data /app
 
-RUN rm -rf /var/www \
-    && mkdir -p /var/www
-
-RUN ln -s /app/public /var/www/html \
-    && chown -R www-data:www-data /var/www/html
-
 VOLUME /app
 WORKDIR /app
+
+RUN rm -rf /var/www/html \
+    && ln -s /app/public /var/www/html \
+    && chown -R www-data:www-data /var/www/html
