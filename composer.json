@@ -20,6 +20,9 @@
         "socialiteproviders/weixin-web": "^3.0",
         "socialiteproviders/github": "dev-master",
         "guzzlehttp/guzzle": "^6.3",
+        "aws/aws-sdk-php": "~3.0",
+        "symfony/dom-crawler": "^4.2",
+        "overtrue/laravel-wechat": "~4.0",
         "pelieth/laravel-ecrecover": "dev-master"
     },
     "require-dev": {
@@ -29,5 +32,12 @@
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^7.0"
-    }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
