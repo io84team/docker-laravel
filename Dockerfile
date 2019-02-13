@@ -37,4 +37,4 @@ COPY ./composer.json /build/composer.json
 
 WORKDIR /build
 
-RUN composer install
+RUN php -d memory_limit=-1 `which composer` install
