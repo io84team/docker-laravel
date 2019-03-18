@@ -41,6 +41,12 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://repo.packagist.org"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
