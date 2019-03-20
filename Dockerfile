@@ -20,22 +20,6 @@ RUN apt-get install -y software-properties-common \
 
 RUN DEBIAN_FRONTEND=noninteractive
 
-# Python
-RUN apt-get install -y python2.7 \
-    python-powerline \
-    python-pip
-
-# NPM
-COPY node8x.sources.list /etc/apt/node8x.sources.list
-RUN cat /etc/apt/node8x.sources.list >> /etc/apt/sources.list
-
-RUN gpg --keyserver wwwkeys.pgp.net --recv-keys 1655A0AB68576280
-RUN gpg --export -a 1655A0AB68576280 | apt-key add -
-RUN apt-get update -yqq
-
-RUN apt-get install -y --allow-unauthenticated nodejs \
-    && npm install -g cnpm --registry=https://registry.npm.taobao.org
-
 # PHP
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://mirror.xtom.com.hk/sury/php/apt.gpg
 RUN sh -c 'echo "deb https://mirror.xtom.com.hk/sury/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'   
