@@ -31,10 +31,10 @@ RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
-RUN mkdir -p /build
+RUN mkdir -p /opt/build
 
-COPY ./composer.json /build/composer.json
+COPY ./composer.json /opt/build/composer.json
 
-WORKDIR /build
+WORKDIR /opt/build
 
 RUN php -d memory_limit=-1 `which composer` install
