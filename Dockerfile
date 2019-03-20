@@ -22,22 +22,22 @@ RUN DEBIAN_FRONTEND=noninteractive
 
 # PHP
 RUN apt-get install -y \
-        php7.1-cli \
-        php7.1-common \
-        php7.1-curl \
-        php7.1-intl \
-        php7.1-json \
-        php7.1-xml \
-        php7.1-mbstring \
-        php7.1-mysql \
-        php7.1-pgsql \
-        php7.1-sqlite \
-        php7.1-sqlite3 \
-        php7.1-zip \
-        php7.1-bcmath \
-        php7.1-memcached \
-        php7.1-gd \
-        php7.1-dev \
+        php7-cli \
+        php7-common \
+        php7-curl \
+        php7-intl \
+        php7-json \
+        php7-xml \
+        php7-mbstring \
+        php7-mysql \
+        php7-pgsql \
+        php7-sqlite \
+        php7-sqlite3 \
+        php7-zip \
+        php7-bcmath \
+        php7-memcached \
+        php7-gd \
+        php7-dev \
         pkg-config \
         libcurl4-openssl-dev \
         libedit-dev \
