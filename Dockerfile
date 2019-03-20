@@ -21,8 +21,7 @@ RUN apt-get install -y software-properties-common \
 RUN DEBIAN_FRONTEND=noninteractive
 
 # PHP
-RUN apt-get install -y --allow-downgrades --allow-remove-essential \
-        --allow-change-held-packages \
+RUN apt-get install -y \
         php7.1-cli \
         php7.1-common \
         php7.1-curl \
