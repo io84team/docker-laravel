@@ -20,18 +20,7 @@ RUN apt-get install -y software-properties-common \
 
 RUN DEBIAN_FRONTEND=noninteractive
 
-ENV LANGUAGE=en_US.UTF-8
-ENV LC_ALL=en_US.UTF-8
-ENV LC_CTYPE=en_US.UTF-8
-ENV LANG=en_US.UTF-8
-ENV TERM xterm
-
-RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-RUN locale-gen
-
-RUN update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
-
-# Pythone
+# Python
 RUN apt-get install -y python2.7 \
     python-powerline \
     python-pip
