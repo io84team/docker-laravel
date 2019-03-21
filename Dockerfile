@@ -1,5 +1,7 @@
 FROM happywork/php-fpm:latest
 
+RUN apk add composer --no-cache
+
 RUN mkdir -p /build
 
 COPY ./composer.json /build/composer.json
