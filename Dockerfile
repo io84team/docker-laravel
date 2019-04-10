@@ -34,6 +34,7 @@ RUN apt-get update \
     && apt-get clean \
     && apt-get autoclean \
 
+    && php -d memory_limit=-1 `which composer` self-update \
     && php -d memory_limit=-1 `which composer` install \
 
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
