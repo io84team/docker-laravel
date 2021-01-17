@@ -1,4 +1,4 @@
-FROM php:7.3-apache 
+FROM php:8.0.1-apache 
 
 RUN usermod -u 1000 www-data
 RUN groupmod -g 1000 www-data
@@ -15,7 +15,7 @@ RUN apt-get update \
         git \
         wget
         
-RUN yes "" | pecl install mcrypt-1.0.2 \
+RUN yes "" | pecl install mcrypt \
     && yes "" | pecl install redis
 
 RUN docker-php-ext-configure gd \
